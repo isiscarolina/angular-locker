@@ -1,0 +1,45 @@
+<app-lista-locker (sendPosition) = "getPositionsLocker($event)"></app-lista-locker>
+
+<div class="modal fade mt-5 pt-5" id="editModalLocker" tabindex="-1" role="dialog"
+    aria-label="editModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="editModalLabel">Editar Locker</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>     
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="">Número Locker</label>
+                        <input *ngIf="lockerFound" type="text" name="title" class="form-control" [(ngModel)]="lockerFound.numeroLocker">
+                    </div>
+                    <div class="form-group">
+                        <label for="">Tipo Locker</label>
+                        <input *ngIf="lockerFound" type="text" name="title" class="form-control" [(ngModel)]="lockerFound.tipoLocker">
+                    </div>
+                    <div class="form-group">
+                        <label for="">Serial Locker</label>
+                        <input *ngIf="lockerFound" type="text" name="title" class="form-control" [(ngModel)]="lockerFound.serialLocker">
+                    </div>
+                    <div class="form-group">
+                        <label for="">Observação</label>
+                        <input *ngIf="lockerFound" type="text" name="title" class="form-control" [(ngModel)]="lockerFound.observacao" >
+                    </div>
+                    <div class="form-group">
+                        <label for="">Data Ocupação</label>
+                        <input *ngIf="lockerFound" type="text" name="title" class="form-control"  [(ngModel)]="lockerFound.dataOcupacao">
+                    </div>           
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal" (click)="editLocker()">Salvar Alterações</button>
+            </div>
+
+        </div>
+    </div>
+
+</div>

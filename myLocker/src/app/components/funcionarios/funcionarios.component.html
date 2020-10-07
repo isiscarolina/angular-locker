@@ -1,0 +1,46 @@
+
+<app-lista-funcionarios (sendPosition) = "getPositions($event)"></app-lista-funcionarios>
+
+<div class="modal fade mt-5 pt-5" id="editModal" tabindex="-1" role="dialog"
+    aria-label="editModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="editModalLabel">Editar Funcionario</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>     
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="">Nome</label>
+                        <input *ngIf="funcionarioFound" type="text" name="title" class="form-control" [(ngModel)]="funcionarioFound.nome">
+                    </div>
+                    <div class="form-group">
+                        <label for="">CPF</label>
+                        <input *ngIf="funcionarioFound" type="text" name="title" class="form-control" [(ngModel)]="funcionarioFound.cpf">
+                    </div>
+                    <div class="form-group">
+                        <label for="">Cargo</label>
+                        <input *ngIf="funcionarioFound" type="text" name="title" class="form-control" [(ngModel)]="funcionarioFound.cargo">
+                    </div>
+                    <div class="form-group">
+                        <label for="">Telefone</label>
+                        <input *ngIf="funcionarioFound" type="text" name="title" class="form-control" [(ngModel)]="funcionarioFound.telefone" >
+                    </div>
+                    <div class="form-group">
+                        <label for="">Setor</label>
+                        <input *ngIf="funcionarioFound" type="text" name="title" class="form-control"  [(ngModel)]="funcionarioFound.setor">
+                    </div>           
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal" (click)="editFuncionario()">Salvar Alterações</button>
+            </div>
+
+        </div>
+    </div>
+
+</div>

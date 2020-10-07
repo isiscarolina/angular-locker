@@ -1,0 +1,37 @@
+<div class="card">
+    <div class="card-header">
+        <h3 class="card-title text-center">Locker</h3>
+    </div>
+    <div class="card-body">
+        <form #myForm>
+            <div class="form-group">
+                <label for="">Número Locker</label>
+                <input type="text" class="form-control" aria-describedby="title" name="numeroLocker" 
+                [(ngModel)] = "newLocker.numeroLocker">
+            </div>
+            <div class="form-group">
+                <label for="">Tipo Locker</label>
+                <input type="text" class="form-control" aria-describedby="title" name="tipoLocker"
+                [(ngModel)] = "newLocker.tipoLocker">
+            </div>
+            <div class="form-group">
+                <label for="">Serial Locker</label>
+                <input type="text" class="form-control" aria-describedby="title" name="serialLocker"
+                [(ngModel)] = "newLocker.serialLocker">
+            </div>
+            <div class="form-group">
+                <label for="">Observação</label>
+                <input type="text" class="form-control" aria-describedby="title" name="observacao"
+                [(ngModel)] = "newLocker.observacao">
+            </div>
+            <div class="form-group">
+                <label for="">Data Ocupação</label>
+                <input type="text" class="form-control" aria-describedby="title" name="dataOcupacao"
+                [(ngModel)] = "newLocker.dataOcupacao">
+            </div>
+            <button type="submit" class="btn btn-outline-primary btn-lg btn-block" (click)="addLocker()">Enviar Locker</button>
+        </form>
+    </div>
+</div>
+
+

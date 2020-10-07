@@ -1,0 +1,29 @@
+<div class="container">
+    <h3 class="ml-3">Lista de Funcionarios</h3>
+
+    <div class="col-md-12">
+        <div class="row">
+            <div class="col-md-4 mt-4" *ngFor= "let funcionario of myFuncionario; let i = index"> 
+                <div class="card">
+                    <div class="card-body">
+                       <h5>{{funcionario.nome}}</h5>
+                       <h5>{{funcionario.cpf}}</h5>
+                       <h5>{{funcionario.cargo}}</h5>
+                       <h5>{{funcionario.telefone}}</h5>
+                       <h5>{{funcionario.setor}}</h5>
+                       
+                       <hr>
+                        <div class="row justify-content-between container">
+                           <div class="col-md-6">
+                               <button type="button" class="btn btn-warning" (click) = "getPositions(funcionario.id)"  data-toggle="modal" data-target="#editModal">Editar</button> 
+                           </div>
+                           <div class="col-md-6">
+                              <button type="button" class="btn btn-danger ml-2" (click) = "deleteFuncionario(i)">Apagar</button>
+                           </div>
+                       </div>
+                   </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

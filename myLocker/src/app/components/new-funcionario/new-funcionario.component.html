@@ -1,0 +1,36 @@
+<div class="card">
+    <div class="card-header">
+        <h3 class="card-title text-center">Funcionario</h3>
+    </div>
+    <div class="card-body">
+        <form #myForm>
+            <div class="form-group">
+                <label for="">Nome</label>
+                <input type="text" class="form-control" aria-describedby="title" name="title" 
+                [(ngModel)] = "newFuncionario.nome">
+            </div>
+            <div class="form-group">
+                <label for="">CPF</label>
+                <input type="text" class="form-control" aria-describedby="title" name="cpf"
+                [(ngModel)] = "newFuncionario.cpf">
+            </div>
+            <div class="form-group">
+                <label for="">Cargo</label>
+                <input type="text" class="form-control" aria-describedby="title" name="cargo"
+                [(ngModel)] = "newFuncionario.cargo">
+            </div>
+            <div class="form-group">
+                <label for="">Telefone</label>
+                <input type="text" class="form-control" aria-describedby="title" name="telefone"
+                [(ngModel)] = "newFuncionario.telefone">
+            </div>
+            <div class="form-group">
+                <label for="">Setor</label>
+                <input type="text" class="form-control" aria-describedby="title" name="setor"
+                [(ngModel)] = "newFuncionario.setor">
+            </div>
+            <button type="submit" class="btn btn-outline-primary btn-lg btn-block" (click)="addFuncionario()">Enviar Funcionario</button>
+        </form>
+    </div>
+</div>
+
